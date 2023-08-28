@@ -17,6 +17,7 @@ def getNoteDetail(request, pk):
 
 def createNote(request):
     data = request.data
+    print('DATA:', type(data))
     note = Note.objects.create(
         body=data['body']
     )
